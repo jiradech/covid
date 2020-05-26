@@ -1,0 +1,136 @@
+/* @@@@@@@@@@@@@  Banner Section Start Here  @@@@@@@@@@@@@@ */
+.banner-section {
+    background: linear-gradient(to top, #d1d1f2, #dddcf5, #e9e8f8, #f4f3fc, #ffffff);
+    @extend %rel;
+    @extend %hidden;
+    padding: 100px 0;
+    @include breakpoint(lg) {
+        padding: 170px 0 90px;
+    }
+    .banner-area {
+        .content-part {
+            .section-header {
+                h2, h3 {
+                    color: $title-color;
+                    text-transform: uppercase;
+                }
+                h3 {
+                    @include breakpoint(max-sm) {
+                        font-size: 20px;
+                    }
+                }
+                h2 {
+                    margin-bottom: 0;
+                    @include breakpoint(max-sm) {
+                        font-size: 28px;
+                    }
+                    @include breakpoint(lg) {
+                        font-size: $fs-h1;
+                        line-height: $lh-h1;
+                    }
+                    &.count-people {
+                        color: $theme-color;
+                    }
+                    &.banner-title-2 {
+                        @include breakpoint(sm) {
+                            font-size: 48px;
+                        }
+                    }
+                }
+                .button-group {
+                    @extend %flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-top: 40px;
+                    .lab-btn {
+                        margin-bottom: 30px;
+                        padding: 16px 35px;
+                        @include breakpoint(sm) {
+                            margin-right: 15px;
+                            margin-bottom: 0;
+                        }
+                        &.style-2 {
+                            span {
+                                color: $white-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .section-wrapper {
+            @include breakpoint(max-lg) {}
+            .banner-thumb {
+                text-align: center;
+                img {
+                    @include breakpoint(xl) {
+                        max-width: none;
+                    }
+                }
+            }
+        }
+    }
+    &.home-2 {
+        background: #06264d;
+        @include breakpoint(lg) {
+            padding: 250px 0 150px;
+        }
+        .banner-shape {
+            @extend %abs;
+            right: 0;
+            bottom: 0;
+            @include breakpoint(xl) {
+                top: 0;
+                bottom: auto;
+            }
+            @include breakpoint(max-lg) {
+                display: none;
+            }
+        }
+        .banner-area {
+            .content-part {
+                @include breakpoint(lg) {
+                    @include breakpoint(max-xxl) {
+                        margin-right: 115px;
+                    }
+                }
+                .banner-content {
+                    h2, p {
+                        color: $white-color;
+                    }
+                    .button-group {
+                        @extend %flex;
+                        align-items: center;
+                        margin-top: 40px;
+                        .lab-btn {
+                            margin-bottom: 30px;
+                            padding: 16px 45px;
+                            @include breakpoint(sm) {
+                                margin-right: 15px;
+                                margin-bottom: 0;
+                            }
+                            &:hover {
+                                background: $white-color;
+                                span {
+                                    color: $theme-color;
+                                }
+                            }
+                            &.style-2 {
+                                span {
+                                    color: $white-color;
+                                }
+                                &:hover {
+                                    background: $theme-color;
+                                    border-color: $theme-color;
+                                    span {
+                                        color: $white-color;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

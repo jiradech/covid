@@ -1,0 +1,833 @@
+/* @@@@@@@@@@@@@  Global CSS  @@@@@@@@@@@@@@ */ 
+
+/* @@@@@@@@@@@@@  Header Section Start Here  @@@@@@@@@@@@@@ */
+.section-header {
+    text-align: center;
+    margin-bottom: 30px;
+    @include breakpoint(lg) {
+        max-width: 70%;
+        margin: 0 auto 60px;
+    }
+    @include breakpoint(xl) {
+        max-width: 63%;
+    }
+    h2 {
+        margin-bottom: 15px;
+        margin-top: -10px;
+        @include breakpoint(lg) {
+            margin-bottom: 20px;
+        }
+    }
+}
+
+
+/* @@@@@@@@@@@@@  lab Item Start Here  @@@@@@@@@@@@@@ */ 
+.service-item {
+    .service-inner {
+        margin: 15px 0;
+        padding: 20px;
+        @include transition($transition);
+        @include border-radius(6px);
+        @include breakpoint(md) {
+            margin: 15px;
+            padding: 30px;
+        }
+        .service-thumb {
+            margin-bottom: 20px;
+            img {
+                width: 93px;
+                height: 93px;
+                @include border-radius(100%);
+            }
+        }
+        .service-content {
+            h4 {
+                margin-bottom: 5px;
+                @include transition($transition);
+                @include breakpoint(lg) {
+                    margin-bottom: 15px;
+                }
+            }
+            p {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+.corona-item {
+    padding: 15px;
+    .corona-inner {
+        @extend %flex;
+        align-items: center;
+        .corona-thumb {
+            img {
+                width: 70px;
+                height: 70px;
+            }
+        }
+        .corona-content {
+            margin-left: 15px;
+            h3 {
+                margin-bottom: 0;
+                @include breakpoint(sm) {
+                    line-height: 36px;
+                }
+            }
+            p {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+.post-item {
+    @extend %hidden;
+    .post-item-inner {
+        box-shadow: 0 0 8px rgba(136, 136, 136, .08);
+        @include transition($transition);
+        @extend %rel;
+        .post-thumb {
+            a {
+                display: block;
+                img {
+                    width: 100%;
+                }
+            }
+        }
+        .post-content {
+            padding: 30px 20px;
+            background: $white-color;
+            h6 {
+                margin-bottom: 0;
+            }
+            .entry-meta {
+                .date {
+                    font-size: $fs-base;
+                    color: $desc-color;
+                    display: inline-block;
+                }
+            }
+            .author-date {
+                @extend %flex;
+                justify-content: flex-start;
+                align-items: center;
+                margin: 10px 0 15px;
+                a {
+                    margin-right: 30px;
+                    padding: 3px 0;
+                    display: block;
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                    &:hover {
+                        color: $theme-color;
+                    }
+                    i {
+                        margin-right: 5px;
+                        color: #cccccc;
+                    }
+                }
+            }
+            .post-footer {
+                @extend %flex;
+                align-items: center;
+                padding: 0 20px;
+                padding-top: 20px;
+                margin: 0 -20px;
+                margin-top: 25px;
+                border-top: 1px solid $border-color;
+                justify-content: space-between;
+            }
+            .lab-btn {
+                padding: 13px 32px;
+                margin-top: 5px;
+                box-shadow: 0 10px 10px rgba(248, 118, 158, .10);
+            }
+        }
+    }
+    &.slider-post {
+        .post-item-inner {
+            &:hover {
+                .post-thumb {
+                    &.post-thumb-slider {
+                        .post-thumb-slider-next {
+                            left: 10px;
+                        }
+                        .post-thumb-slider-prev {
+                            right: 10px;
+                        }
+                    }
+                }
+            }
+            .post-thumb {
+                &.post-thumb-slider {
+                    @extend %flex;
+                    @extend %rel;
+                    img {
+                        width: 100%;
+                    }
+                    .post-thumb-slider-next, .post-thumb-slider-prev {
+                        @extend %abs;
+                        width: 40px;
+                        height: 40px;
+                        line-height: 40px;
+                        background: $white-color;
+                        color: $title-color;
+                        z-index: 1;
+                        text-align: center;
+                        top: 50%;
+                        outline: none;
+                        cursor: pointer;
+                        transform: translateY(-50%);
+                        @include border-radius(100%);
+                        @include transition($transition);
+                        &:hover, .active {
+                            background: $theme-color;
+                            color: $white-color;
+                        }
+                    }
+                    .post-thumb-slider-next {
+                        left: -10%;
+                    }
+                    .post-thumb-slider-prev {
+                        right: -10%;
+                    }
+                }
+            }
+        }
+    }
+    &.video-post {
+        iframe {
+            width: 100%;
+            height: 370px;
+            border: none;
+        }
+    }
+    &.qute-post {
+        .post-item-inner {
+            &:hover {
+                .post-thumb {
+                    img {
+                        transform: scale(1) !important;
+                    }
+                }
+            }
+            .post-thumb {
+                @extend %rel;
+                height: 190px;
+                background: $theme-color;
+                @include breakpoint(sm) {
+                    height: 370px;
+                }
+                .qute-content {
+                    @extend %abs;
+                    width: 100%;
+                    text-align: center;
+                    top: 50%;
+                    left: 50%;
+                    padding: 20px;
+                    transform: translate(-50%, -50%);
+                    h5 {
+                        margin-top: 15px;
+                        color: $white-color;
+                        line-height: 1.5;
+                        margin-bottom: 0;
+                        font-weight: 600;
+                        font-size: 22px;
+                        @include breakpoint(max-md) {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.team-item {
+    .team-item-inner {
+        box-shadow: 0 0 10px rgba(136, 136, 136, .10);
+        background: $white-color;
+        .team-thumb {
+            img {
+                width: 100%;
+            }
+        }
+        .team-content {
+            padding: 20px 20px 30px;
+            @include breakpoint(sm) {
+                padding: 30px;
+            }
+            .member-name {
+                margin-bottom: 5px;
+                display: inline-block;
+                @include transition($transition);
+                &:hover {
+                    color: $theme-color;
+                }
+            }
+            .member-dagi {
+                margin-bottom: 10px;
+                display: block;
+                color: #1c2551;
+            }
+            .member-details {
+                margin-bottom: 30px;
+            }
+        }
+    }
+    &.style-2 {
+        .team-item-inner {
+            .team-thumb {
+                @extend %rel;
+                @include breakpoint(lg) {
+                    padding-right: 50px;
+                }
+                .self-intregration{
+                    @extend %flex;
+                    @extend %abs;
+                    align-items: center;
+                    transform: rotate(90deg) translate(-186px, -184px);
+                    width: calc(100% - 50px);
+                    @include breakpoint(max-xl){
+                        transform: rotate(90deg) translate(-226px, -224px);
+                    }
+                    @include breakpoint(max-lg) {
+                        display: none !important;
+                    }
+                    .intregration-head {
+                        width: 40%;
+                        padding: 14px;
+                        background: linear-gradient(to left, #ff4f58, #ff6747, #ff8134, #ff9a1e, #ffb400);
+                        transition: all 0.5s ease-in-out;
+                        @extend %rel;
+                        span {
+                            color: $white-color;
+                            text-transform: uppercase;
+                            font-weight: 600;
+                            display: block;
+                            text-align: center;
+                            &::after {
+                                position: absolute;
+                                content: "";
+                                width: 15px;
+                                height: 15px;
+                                background: #ff4f58;
+                                right: -6px;
+                                transform: rotate(45deg);
+                                bottom: 18px;
+                                border-radius: 3px;
+                                @include transition($transition);
+                            }
+                            
+                        }
+                    }
+                    .intregration-icon{
+                        width: 60%;
+                        background: $white-color;
+                        ul {
+                            padding: 0;
+                            margin: 0;
+                            display: flex;
+                            li {
+                                padding: 0;
+                                list-style: none;
+                                &:last-child {
+                                    a {
+                                        border-right: none;
+                                    }
+                                }
+                            }
+                            a {
+                                display: block;
+                                padding: 14px 17px;
+                                background: transparent;
+                                border-right: 1px solid $border-color;
+                                @include transition($transition);
+                                i {
+                                    transform: rotate(-90deg);
+                                    transition: all 0.3s ease-in-out;
+                                    @include breakpoint (max-sm) {
+                                        transform: rotate(0deg);
+                                    }
+                                }
+                                &.facebook {
+                                    color: $facebook;
+                                }
+                                &.pinterest {
+                                    color: $pinterest;
+                                }
+                                &.twitter {
+                                    color: $twitter;
+                                }
+                                &.globe {
+                                    color: $globe;
+                                }
+                                &:hover{
+                                    background: $theme-color;
+                                    i {
+                                        color: $white-color !important;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .team-content {
+                .member-details {
+                    margin-top: 5px;
+                    padding-top: 15px;
+                    border-top: 1px solid $border-color;
+                }
+                .icon-style-list {
+                    li {
+                        &:last-child {
+                            @include breakpoint(lg) {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* @@@@@@@@@@@@@  countdown Start Here  @@@@@@@@@@@@@@ */ 
+.countdown {
+    margin: -15px;
+    margin-bottom: 30px;
+    li {
+        display: inline-block;
+        text-align: center;
+        padding: 0 10px;
+        margin: 5px;
+        @include breakpoint(sm) {
+            margin: 15px;
+        }
+        &:last-child {
+            .count-number {
+                &:after {
+                    display: none;
+                }
+            }
+        }
+        .count-number {
+            font-size: 24px;
+            font-weight: 700;
+            @extend %rel;
+            @include breakpoint(sm) {
+                font-size: 36px;
+            }
+            &:after {
+                @extend %abs;
+                content: ":" !important;
+                top: 50%;
+                right: -30px;
+                transform: translateY(-50%);
+                font-weight: 700;
+                color: $title-color;
+            }
+            &.days {
+                color: #ff4f57;
+            }
+            &.hours {
+                color: #e85acb;
+            }
+            &.minutes {
+                color: #0dc4b9;
+            }
+            &.seconds {
+                color: #529bfc;
+            }
+        }
+        .count-text {
+            color: $title-color;
+        }
+    }
+}
+
+/* @@@@@@@@@@@@@  video thumb Start Here  @@@@@@@@@@@@@@ */ 
+.video-thumb {
+    @extend %rel;
+    &:hover {
+        .video-icon {
+            i {
+                color: $youtube;
+            }
+        }
+    }
+    img {
+        width: 100%;
+    }
+    .video-icon {
+        @extend %abs;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        i {
+            color: $white-color;
+            font-size: $fs-h3;
+            @include transition($transition);
+            @include breakpoint(sm) {
+                font-size: $fs-h1;
+            }
+        }
+    }
+}
+
+/* @@@@@@@@@@@@@  paginations Start Here  @@@@@@@@@@@@@@ */ 
+.paginations {
+    margin: 40px 0;
+    @include breakpoint(lg) {
+        margin-bottom: 0;
+    }
+    ul {
+        margin: 0;
+        li {
+            padding: 5px;
+            a {
+                width: 46px;
+                height: 46px;
+                align-items: center;
+                justify-content: center;
+                box-shadow : 0 0px 5px rgba(136, 136, 136, .1);
+                color: $desc-color;
+                z-index: 1;
+                @extend %rel;
+                @extend %flex;
+                @include border-radius(50%);
+                @include transition($transition);
+                &.active,
+                &:hover {
+                    color: $white-color;
+                    box-shadow: 0 18px 24px rgba(255, 51, 114, .36);
+                    background: $theme-color;
+                }
+                &.dot {
+                    box-shadow: none;
+                    &:hover {
+                        background: transparent;
+                        color: $desc-color;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*@@@@@@@@@@@@@@   scocial-media Start Here  @@@@@@@@@@@@@@@@@*/
+.scocial-media {
+    margin-bottom: 20px;
+    a {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        border-radius: 2px;
+        color: $white-color;
+        font-size: $fs-h5;
+        margin-bottom: 4px;
+        text-align: center;
+        display: inline-block;
+        &:hover {
+            border-radius: 100%;
+            transform: translateY(-5px);
+            box-shadow: 0 5px 10px rgba(136, 136, 136, .20);
+        }
+    }
+}
+.fa-phone-square {
+    &::before {
+        transform: rotate(90deg);
+        display: inline-block;
+    }
+}
+.facebook {
+    background: $facebook;
+}
+.twitter {
+    background: $twitter;
+}
+.linkedin {
+    background: $linkedin;
+}
+.vimeo {
+    background: $vimeo;
+}
+.bg-white {
+    background: $white-color;
+}
+.bg-service, .bg-action {
+    background: #063793;
+    h2, h4, p {
+        color: $white-color;
+    }
+}
+.bg-team, .bg-faq, .bg-corona {
+    background: #f9fcff;
+}
+.bg-blog {
+    background: url(../../assets/images/blog/bg-blog.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    .section-header {
+        h2, p {
+            color: $white-color;
+        }
+    }
+}
+.bg-f9 {
+    background: #f9fcff;
+}
+
+
+/* @@@@@@@@@@@@@  Common CSS Writing Now  @@@@@@@@@@@@@@ */ 
+.menu-item-has-children {
+    margin-right: 16px;
+    position: relative;
+    >a {
+        @extend %rel;
+        &::after {
+            @extend %abs;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+            font-weight: 400;
+            content: "\ea99" !important;
+            font-family: IcoFont !important;
+        }
+    }
+}
+
+
+.padding-tb {
+    padding-top: 80px;
+    padding-bottom: 55px;
+    @include breakpoint(lg) {
+        padding-top: 110px;
+        padding-bottom: 95px;
+    }
+}
+.lab-btn {
+    display: inline-block;
+    padding: 16px 25px;
+    background: $theme-color;
+    @include transition($transition);
+    @include border-radius(50px);
+    @extend %rel;
+    @extend %hidden;
+    span {
+        z-index: 1;
+        position: relative;
+        font-size: 14px;
+        font-weight: 700;
+        color: $white-color;
+        text-transform: uppercase;
+    }
+    &:hover {
+        box-shadow: 0 0 24px rgba(255, 51, 114, .30);
+    }
+    &.style-2 {
+        background: transparent;
+        border: 2px solid $white-color;
+        span {
+            color: $theme-color;
+        }
+    }
+}
+
+
+.pluse_1, .pluse_2 {
+    @extend %abs;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    z-index: -1;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background: rgba(255, 51, 114, 0.10);
+    &::after, &::before {
+        @extend %abs;
+        background: rgba(255, 51, 114, 0.20);
+        border-radius: 50%;
+        left: 50%;
+        top: 50%;
+        margin-left: -40px;
+        margin-top: -40px;
+    }
+    &::after {
+        width: 60px;
+        height: 60px;
+        background: transparent;
+        margin-left: -30px;
+        margin-top: -30px;
+    }
+    &:before {
+        width: 80px;
+        height: 80px;
+    }
+}
+.pluse_1 {
+    -webkit-animation: pluse_animate 3s infinite linear;
+    animation: pluse_animate 3s infinite linear;
+}
+.pluse_2 {
+    &::before {
+        -webkit-animation: pluse_animate 3s infinite linear;
+        animation: pluse_animate 3s infinite linear;
+        -webkit-animation-delay: 1s;
+        animation-delay: 1s;
+        margin-left: 0;
+        margin-top: 0;
+    }
+}
+
+.scrollToTop {
+    position: fixed;
+    bottom: -30%;
+    right: 5%;
+    z-index: 9;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 24px;
+    animation: lab_top_up 5s linear infinite;
+    @include transition($transition);
+    i {
+        @extend %abs;
+        @include border-radius(100%);
+        color: $white-color;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background: $theme-color;
+    }
+    &:hover {
+        background: $primary-color;
+    }
+}
+.lab-ul {
+    padding: 0;
+    margin: 0;
+    li {
+        list-style: none;
+    }
+    &.icon-style-list {
+        margin: 0;
+        >li {
+            padding: 0;
+            border-bottom: 1px solid $border-color;
+            justify-content: flex-start;
+            &:first-child {
+                border-top: 1px solid $border-color;
+            }
+            i {
+                width: 50px;
+                text-align: center;
+                color: #c2c2c2;
+                margin: 0 15px 0 5px;
+                line-height: 50px;
+                @extend %rel;
+                &:after {
+                    @extend %abs;
+                    width: 100%;
+                    height: calc(100% + 18px) ;
+                    border-left: 1px solid $border-color;
+                    border-right: 1px solid $border-color;
+                    top: -9px ;
+                    left: 0 ;
+                }
+            }
+            span {
+                width: calc(100% - 70px);
+            }
+        }
+    }
+}
+
+.mask_img {
+    -webkit-mask-position: center center;
+    -webkit-mask-size: 100%;
+    -webkit-mask-repeat: no-repeat;
+}
+
+/* @@@@@@@@@@@@@  Extend Property CSS Writing Now  @@@@@@@@@@@@@@ */
+%flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+%rel {
+    position: relative;
+}
+%abs {
+    position: absolute;
+    content: "";
+}
+%pm {
+    padding: 0;
+    margin: 0;
+}
+%hidden {
+    overflow: hidden;
+}
+
+
+
+@keyframes pluse_animate {
+    0% {
+        opacity: 1;
+        -webkit-transform: translate(-50%, -50%) scale(0.3);
+        transform: translate(-50%, -50%) scale(0.3);
+    }
+    100% {
+        opacity: 0;
+        -webkit-transform: translate(-50%, -50%) scale(2);
+        transform: translate(-50%, -50%) scale(2);
+    }
+}
+
+
+
+td {
+    color: $title-color;
+    &.new_case {
+        background: #faedac;
+    }
+    &.new_death {
+        background: #db0200;
+        color: $white-color;
+    }
+}
+.dataTables_paginate.paging_simple_numbers, .dataTables_info {
+    display: none;
+}
+div.dataTables_wrapper div.dataTables_length select {
+    width: 75px;
+    display: inline-block;
+    padding: 5px;
+    border-radius: 4px;
+    outline: none;
+    background: transparent;
+    margin: 10px;
+    @include breakpoint(lg) {
+        margin: 0 10px;
+    }
+}
+div#example_length {
+    display: inline-block;
+    float: left;
+}
+div#example_filter {
+    display: inline-block;
+    float: right;
+}

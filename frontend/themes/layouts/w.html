@@ -1,0 +1,361 @@
+
+
+<!DOCTYPE html>
+<html lang="th-TH">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="csrf-param" content="_csrf">
+    <meta name="csrf-token" content="SEFvbXB1S1klMFxfCTYpbQEMWjghRB8XOnFbDiEBGm4dcQVcNkFyEQ==">
+    <title>ประชากรจำแนกเพศ กลุ่มอายุรายปี</title>
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/styles/default.min.css" rel="stylesheet" position="1">
+    <link href="/themes/quirk/lib/jquery.gritter/jquery.gritter.css" rel="stylesheet">
+    <link href="/themes/quirk/lib/animate.css/animate.css" rel="stylesheet">
+    <link href="/assets/cfd6869d/css/bootstrap.css?v=1464500108" rel="stylesheet">
+    <link href="/assets/f5dea82b/css/query-builder.default.min.css?v=1464500108" rel="stylesheet">
+    <link href="/assets/cbf9bb8c/css/bootstrap.css?v=1464500108" rel="stylesheet">
+    <link href="/assets/e9933336/css/kv-grid.min.css?v=1464500108" rel="stylesheet">
+    <link href="/css/wfmi-style.css?v=1449231777" rel="stylesheet">
+    <link href="/themes/quirk/lib/Hover/hover.css?v=1449231534" rel="stylesheet">
+    <link href="/themes/quirk/lib/fontawesome/css/font-awesome.css?v=1449231536" rel="stylesheet">
+    <link href="/themes/quirk/lib/ionicons/css/ionicons.css?v=1449231592" rel="stylesheet">
+    <link href="/themes/quirk/lib/jquery-toggles/toggles-full.css?v=1449231606" rel="stylesheet">
+    <link href="/themes/quirk/css/quirk.css?v=1466338709" rel="stylesheet">
+    <style>
+        body {
+            background-color: #ffffff;
+        }
+    </style>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/highlight.min.js"></script>
+    <script type="text/javascript">var kvGridExp_61b38ee8={"gridId":"w1","target":"_self","messages":{"allowPopups":"Disable any popup blockers in your browser to ensure proper download.","confirmDownload":"Ok to proceed?","downloadProgress":"Generating the export file. Please wait...","downloadComplete":"Request submitted! You may safely close this dialog after saving your downloaded file."},"exportConversions":[{"from":"<span class=\"glyphicon glyphicon-ok text-success\"></span>","to":"Active"},{"from":"<span class=\"glyphicon glyphicon-remove text-danger\"></span>","to":"Inactive"}],"showConfirmAlert":true};
+    var kvGridExp_12735912={"filename":"grid-export","showHeader":true,"showPageSummary":true,"showFooter":true};
+    var kvGridExp_8612284e={"gridOpts":kvGridExp_61b38ee8,"genOpts":kvGridExp_12735912,"alertMsg":"The HTML export file will be generated for download.","config":{"cssFile":"http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css"}};
+    var kvGridExp_c3a890f6={"gridOpts":kvGridExp_61b38ee8,"genOpts":kvGridExp_12735912,"alertMsg":"The CSV export file will be generated for download.","config":{"colDelimiter":",","rowDelimiter":"\r\n"}};
+    var kvGridExp_ae5e3a8a={"gridOpts":kvGridExp_61b38ee8,"genOpts":kvGridExp_12735912,"alertMsg":"The TEXT export file will be generated for download.","config":{"colDelimiter":"\t","rowDelimiter":"\r\n"}};
+    var kvGridExp_d03a083b={"gridOpts":kvGridExp_61b38ee8,"genOpts":kvGridExp_12735912,"alertMsg":"The EXCEL export file will be generated for download.","config":{"worksheet":"ExportWorksheet","cssFile":""}};
+    var kvGridExp_3775ba9f={"gridOpts":kvGridExp_61b38ee8,"genOpts":kvGridExp_12735912,"alertMsg":"The PDF export file will be generated for download.","config":{"mode":"c","format":"A4-L","destination":"D","marginTop":20,"marginBottom":20,"cssInline":".kv-wrap{padding:20px;}.kv-align-center{text-align:center;}.kv-align-left{text-align:left;}.kv-align-right{text-align:right;}.kv-align-top{vertical-align:top!important;}.kv-align-bottom{vertical-align:bottom!important;}.kv-align-middle{vertical-align:middle!important;}.kv-page-summary{border-top:4px double #ddd;font-weight: bold;}.kv-table-footer{border-top:4px double #ddd;font-weight: bold;}.kv-table-caption{font-size:1.5em;padding:8px;border:1px solid #ddd;border-bottom:none;}","methods":{"SetHeader":[{"odd":{"L":{"content":"Yii2 Grid Export (PDF)","font-size":8,"color":"#333333"},"C":{"content":"Grid Export","font-size":16,"color":"#333333"},"R":{"content":"Generated: Sun, 19-Jun-2016 7:38 pm ICT","font-size":8,"color":"#333333"}},"even":{"L":{"content":"Yii2 Grid Export (PDF)","font-size":8,"color":"#333333"},"C":{"content":"Grid Export","font-size":16,"color":"#333333"},"R":{"content":"Generated: Sun, 19-Jun-2016 7:38 pm ICT","font-size":8,"color":"#333333"}}}],"SetFooter":[{"odd":{"L":{"content":"© Krajee Yii2 Extensions","font-size":8,"font-style":"B","color":"#999999"},"R":{"content":"[ {PAGENO} ]","font-size":10,"font-style":"B","font-family":"serif","color":"#333333"},"line":true},"even":{"L":{"content":"© Krajee Yii2 Extensions","font-size":8,"font-style":"B","color":"#999999"},"R":{"content":"[ {PAGENO} ]","font-size":10,"font-style":"B","font-family":"serif","color":"#333333"},"line":true}}]},"options":{"title":"Grid Export","subject":"PDF export generated by kartik-v/yii2-grid extension","keywords":"krajee, grid, export, yii2-grid, pdf"},"contentBefore":"","contentAfter":""}};
+    var kvGridExp_0eaa127d={"gridOpts":kvGridExp_61b38ee8,"genOpts":kvGridExp_12735912,"alertMsg":"The JSON export file will be generated for download.","config":{"colHeads":[],"slugColHeads":false,"jsonReplacer":function(k,v){return typeof(v)==='string'?$.trim(v):v},"indentSpace":4}};</script>
+
+</head>
+<body>
+
+<div>
+
+    <div class="row" id="page-container">
+
+        <div class="col-md-12 col-sm-12 col-xs-12">
+
+            <div>
+
+                <div class="collapse mb20" id="collapseFilter">
+                    <div id="query-builder"></div><form id="w0" action="/report/view/" method="get"><input type="hidden" name="rules">
+
+                    <input type="hidden" name="id" value="">
+                    <input type="hidden" name="repid" value="33">
+                    <input type="hidden" name="catid" value="0">
+                    <input type="hidden" name="embeded" value="true">
+                    <input type="hidden" name="frameid" value="0">
+
+
+                    <input type="hidden" name="s[scope]" value="6">
+                    <input type="hidden" name="s[region]" value="06">
+                    <input type="hidden" name="s[province]" value="27">
+                    <input type="hidden" name="s[district]" value="2701">
+                    <input type="hidden" name="s[subdistrict]" value="">
+                    <input type="hidden" name="s[cup]" value="">
+                    <input type="hidden" name="s[hospcode]" value="02444">
+                    <input type="hidden" name="s[timescope]" value="3">
+                    <input type="hidden" name="s[govyear]" value="2559">
+                    <input type="hidden" name="s[startdate]" value="19 มิถุนายน 2558">
+                    <input type="hidden" name="s[enddate]" value="19 มิถุนายน 2559">
+
+
+                    <button type="submit">Apply</button>                            <button type="reset">Reset</button>
+                </form>
+                </div>
+
+
+                <form id="link-submit" action="/report/view/" method="get">                    <input type="hidden" name="id" value="">
+                    <input type="hidden" name="repid" value="33">
+                    <input type="hidden" name="catid" value="0">
+                    <input type="hidden" name="embeded" value="true">
+                    <input type="hidden" name="frameid" value="0">
+                    <input type="hidden" name="s[scope]" id="l-scope" value="6">
+                    <input type="hidden" name="s[region]" id="l-region" value="06">
+                    <input type="hidden" name="s[province]" id="l-province" value="27">
+                    <input type="hidden" name="s[district]" id="l-district" value="2701">
+                    <input type="hidden" name="s[subdistrict]" id="l-subdistrict"
+                           value="">
+                    <input type="hidden" name="s[cup]" id="l-cup" value="">
+                    <input type="hidden" name="s[hospcode]" id="l-hospcode" value="02444">
+                    <input type="hidden" name="s[timescope]" id="l-timescope" value="3">
+                    <input type="hidden" name="s[govyear]" id="l-govyear" value="2559">
+                    <input type="hidden" name="s[startdate]" id="l-startdate" value="19 มิถุนายน 2558">
+                    <input type="hidden" name="s[enddate]" id="l-enddate" value="19 มิถุนายน 2559">
+                    <button type="submit" id="filter-submit" style="display: none;">Apply</button>
+                </form>
+
+                <div id="w1-pjax" data-pjax-container="" data-pjax-push-state data-pjax-timeout="1000"><div id="w1" class="grid-view" data-krajee-grid="kvGridInit_d20f8a8a"><div class="panel panel-default">
+                    <div class="panel-heading">    <div class="pull-right">
+                        <div class="summary">แสดง <b>1 ถึง 4</b> จาก <b>4</b> ผลลัพธ์</div>
+                    </div>
+                        <h3 class="panel-title">
+                            <h3 class="panel-title"><i class="fa fa-th-large"></i>  ประชากรจำแนกเพศ กลุ่มอายุรายปี เขตพื้นที่รับผิดชอบ รพ.สต.ท่าแยก ตำบลท่าแยก ปีงบประมาณ 2559</h3>
+                        </h3>
+                        <div class="clearfix"></div></div>
+                    <div class="kv-panel-before">    <div class="pull-right">
+                        <div class="btn-toolbar kv-grid-toolbar" role="toolbar">
+
+                            <div class="btn-group">
+                                <button id="w2" class="btn btn-sm btn-warning dropdown-toggle" title="Export" data-toggle="dropdown"><i class='glyphicon glyphicon-download-alt'></i> Download <span class="caret"></span></button>
+
+                                <ul id="w3" class="dropdown-menu dropdown-menu-right"><li role="presentation" class="dropdown-header">Export Page Data</li>
+                                    <li title="Hyper Text Markup Language"><a class="export-html" href="#" data-format="text/html" tabindex="-1"><i class="text-info fa fa-file-text"></i> HTML</a></li>
+                                    <li title="Comma Separated Values"><a class="export-csv" href="#" data-format="application/csv" tabindex="-1"><i class="text-primary fa fa-file-code-o"></i> CSV</a></li>
+                                    <li title="Tab Delimited Text"><a class="export-txt" href="#" data-format="text/plain" tabindex="-1"><i class="text-muted fa fa-file-text-o"></i> Text</a></li>
+                                    <li title="Microsoft Excel 95+"><a class="export-xls" href="#" data-format="application/vnd.ms-excel" tabindex="-1"><i class="text-success fa fa-file-excel-o"></i> Excel</a></li>
+                                    <li title="Portable Document Format"><a class="export-pdf" href="#" data-format="application/pdf" tabindex="-1"><i class="text-danger fa fa-file-pdf-o"></i> PDF</a></li>
+                                    <li title="JavaScript Object Notation"><a class="export-json" href="#" data-format="application/json" tabindex="-1"><i class="text-warning fa fa-file-code-o"></i> JSON</a></li></ul>
+                            </div><form class="kv-export-form" action="/gridview/export/download/" method="post" style="display:none" target="_self">
+                            <input type="hidden" name="_csrf" value="SEFvbXB1S1klMFxfCTYpbQEMWjghRB8XOnFbDiEBGm4dcQVcNkFyEQ==">
+                            <input type="hidden" name="export_filetype">
+                            <input type="hidden" name="export_filename">
+                            <input type="hidden" name="export_mime">
+                            <input type="hidden" name="export_config">
+                            <input type="hidden" name="export_encoding" value="utf-8">
+                            <textarea name="export_content"></textarea>
+                        </form>
+                            <div class="btn-group"><a id="w1-togdata-page" class="btn btn-sm btn-success" href="/report/view/?repid-link=33&amp;frameid=0&amp;embeded=true&amp;show_table=1&amp;show_tool=0&amp;show_chart=1&amp;_toga654c069=all" title="Show all data" data-pjax="true"><i class='glyphicon glyphicon-resize-full'></i> All</a></div>
+                        </div>
+                    </div>
+
+                        <div class="clearfix"></div></div>
+                    <div id="w1-container" class="panel-inverse kv-grid-container" style="overflow: auto"><table class="kv-grid-table table table-hover table-bordered table-striped table-condensed"><thead>
+                    <tr>	<th class="" colspan="2"></th>
+                        <th class="text-center" colspan="3">น้อยกว่า 1 ปี</th>
+                        <th class="text-center" colspan="3">1-4 ปี</th>
+                        <th class="text-center" colspan="3">5-9 ปี</th>
+                        <th class="text-center" colspan="3">10-14 ปี</th>
+                        <th class="text-center" colspan="3">15-19 ปี</th>
+                        <th class="text-center" colspan="3">20-24 ปี</th>
+                        <th class="text-center" colspan="3">25-29 ปี</th>
+                        <th class="text-center" colspan="3">30-34 ปี</th>
+                        <th class="text-center" colspan="3">35-39 ปี</th>
+                        <th class="text-center" colspan="3">40-44 ปี</th>
+                        <th class="text-center" colspan="3">45-49 ปี</th>
+                        <th class="text-center" colspan="3">50-54 ปี</th>
+                        <th class="text-center" colspan="3">55-59 ปี</th>
+                        <th class="text-center" colspan="3">60-64 ปี</th>
+                        <th class="text-center" colspan="3">65-69 ปี</th>
+                        <th class="text-center" colspan="3">70-74 ปี</th>
+                        <th class="text-center" colspan="3">75-79 ปี</th>
+                        <th class="text-center" colspan="3">80-84 ปี</th>
+                        <th class="text-center" colspan="3">85-89 ปี</th>
+                        <th class="text-center" colspan="3">90-94 ปี</th>
+                        <th class="text-center" colspan="3">95-99 ปี</th>
+                        <th class="text-center" colspan="3">มากกว่า 100 ปี</th>
+                        <th class="" colspan="1"></th>
+                    </tr>
+
+                    <tr><th class="kv-align-center kv-align-middle" style="width:50px;" data-col-seq="0">#</th><th class="kv-nowrap" data-col-seq="1"><a href="/report/view/?repid-link=33&amp;frameid=0&amp;embeded=true&amp;show_table=1&amp;show_tool=0&amp;show_chart=1&amp;sort=%E0%B8%AB%E0%B8%A1%E0%B8%B9%E0%B9%88%E0%B8%9A%E0%B9%89%E0%B8%B2%E0%B8%99" data-sort="หมู่บ้าน">หมู่บ้าน</a></th><th class="text-center kv-align-right kv-nowrap" data-col-seq="2"><a href="/report/view/?repid-link=33&amp;frameid=0&amp;embeded=true&amp;show_table=1&amp;show_tool=0&amp;show_chart=1&amp;sort=male_g1" data-sort="male_g1">ชาย</a></th><th class="text-center kv-align-right kv-nowrap" data-col-seq="3"><a href="/report/view/?repid-link=33&amp;frameid=0&amp;embeded=true&amp;show_table=1&amp;show_tool=0&amp;show_chart=1&amp;sort=female_g1" data-sort="female_g1">หญิง</a></th><th class="text-center kv-align-right kv-nowrap" data-col-seq="4"><a href="/report/view/?repid-link=33&amp;frameid=0&amp;embeded=true&amp;show_table=1&amp;show_tool=0&amp;show_chart=1&amp;sort=t1" data-sort="t1">รวม</a></th><th class="text-center kv-align-right kv-nowrap" data-col-seq="5"><a href="/report/view/?repid-link=33&amp;frameid=0&amp;embeded=true&amp;show_table=1&amp;show_tool=0&amp;show_chart=1&amp;sort=male_g2" data-sort="male_g2">ชาย</a></th><th class="text-center kv-align-right kv-nowrap" data-col-seq="6"><a href="/report/view/?repid-link=33&amp;frameid=0&amp;embeded=true&amp;show_table=1&amp;show_tool=0&amp;show_chart=1&amp;sort=female_g2" data-sort="female_g2">หญิง</a></th><th class="text-center kv-align-right kv-nowrap" data-col-seq="7"><a href="/report/view/?repid-link=33&amp;frameid=0&amp;embeded=true&amp;show_table=1&amp;show_tool=0&amp;show_chart=1&amp;sort=t2" data-sort="t2">รวม</a></th><th class="text-center kv-align-right kv-nowrap" data-col-seq="8"><a href="/report/view/?repid-link=33&amp;frameid=0&amp;embeded=true&amp;show_table=1&amp;show_tool=0&amp;show_chart=1&amp;sort=male_g3" data-sort="male_g3">ชาย</a></th><th class="text-center kv-align-right kv-nowrap" data-col-seq="9"><a href="/report/view/?repid-link=33&amp;frameid=0&amp;embeded=true&amp;show_table=1&amp;show_tool=0&amp;show_chart=1&amp;sort=female_g3" data-sort="female_g3">หญิง</a></th><th class="text-center kv-align-right kv-nowrap" data-col-seq="10"><a href="/report/view/?repid-link=33&amp;frameid=0&amp;embeded=true&amp;show_table=1&amp;show_tool=0&amp;show_chart=1&amp;sort=t3" data-sort="t3">รวม</a></th><th class="text-center kv-align-right kv-nowrap" data-col-seq="11"><a href="/report/view/?repid-link=33&amp;frameid=0&amp;embeded=true&amp;show_table=1&amp;show_tool=0&amp;show_chart=1&amp;sort=male_g4" data-sort="male_g4">ชาย</a></th><th class="text-center kv-align-right kv-nowrap" data-col-seq="12"><a href="/report/view/?repid-link=33&amp;frameid=0&amp;embeded=true&amp;show_table=1&amp;show_tool=0&amp;show_chart=1&amp;sort=female_g4" data-sort="female_g4">หญิง</a></th><th class="text-center kv-align-right kv-nowrap" data-col-seq="13"><a href="/report/view/?repid-link=33&amp;frameid=0&amp;embeded=true&amp;show_table=1&amp;show_tool=0&amp;show_chart=1&amp;sort=t4" data-sort="t4">รวม</a></th><th class="text-center kv-align-right kv-nowrap" data-col-seq="14"><a href="/report/view/?repid-link=33&amp;frameid=0&amp;embeded=true&amp;show_table=1&amp;show_tool=0&amp;show_chart=1&amp;sort=male_g5" data-sort="male_g5">ชาย</a></th><th class="text-center kv-align-right kv-nowrap" data-col-seq="15"><a href="/report/view/?repid-link=33&amp;frameid=0&amp;embeded=true&amp;show_table=1&amp;show_tool=0&amp;show_chart=1&amp;sort=female_g5" data-sort="female_g5">หญิง</a></th><th class="text-center kv-align-right kv-nowrap" data-col-seq="16"><a href="/report/view/?repid-link=33&amp;frameid=0&amp;embeded=true&amp;show_table=1&amp;show_tool=0&amp;show_chart=1&amp;sort=t5" data-sort="t5">รวม</a></th><th class="text-center kv-align-right kv-nowrap" data-col-seq="17"><a href="/report/view/?repid-link=33&amp;frameid=0&amp;embeded=true&amp;show_table=1&amp;show_tool=0&amp;show_chart=1&amp;sort=male_g6" data-sort="male_g6">ชาย</a></th><th class="text-center kv-align-right kv-nowrap" data-col-seq="18"><a href="/report/view/?repid-link=33&amp;frameid=0&amp;embeded=true&amp;show_table=1&amp;show_tool=0&amp;show_chart=1&amp;sort=female_g6" data-sort="female_g6">หญิง</a></th><th class="text-center kv-align-right kv-nowrap" data-col-seq="19"><a href="/report/view/?repid-link=33&amp;frameid=0&amp;embeded=true&amp;show_table=1&amp;show_tool=0&amp;show_chart=1&amp;sort=t6" data-sort="t6">รวม</a></th><th class="text-center kv-align-right kv-nowrap" data-col-seq="20"><a href="/report/view/?repid-link=33&amp;frameid=0&amp;embeded=true&amp;show_table=1&amp;show_tool=0&amp;show_chart=1&amp;sort=male_g7" data-sort="male_g7">ชาย</a></th><th class="text-center kv-align-right kv-nowrap" data-col-seq="21"><a href="/report/view/?repid-link=33&amp;frameid=0&amp;embeded=true&amp;show_table=1&amp;show_tool=0&amp;show_chart=1&amp;sort=female_g7" data-sort="female_g7">หญิง</a></th><th class="text-center kv-align-right kv-nowrap" data-col-seq="22"><a href="/report/view/?repid-link=33&amp;frameid=0&amp;embeded=true&amp;show_table=1&amp;show_tool=0&amp;show_chart=1&amp;sort=t7" data-sort="t7">รวม</a></th><th class="text-center kv-align-right kv-nowrap" data-col-seq="23"><a href="/report/view/?repid-link=33&amp;frameid=0&amp;embeded=true&amp;show_table=1&amp;show_tool=0&amp;show_chart=1&amp;sort=male_g8" data-sort="male_g8">ชาย</a></th><th class="text-center kv-align-right kv-nowrap" data-col-seq="24"><a href="/report/view/?repid-link=33&amp;frameid=0&amp;embeded=true&amp;show_table=1&amp;show_tool=0&amp;show_chart=1&amp;sort=female_g8" data-sort="female_g8">หญิง</a></th><th class="text-center kv-align-right kv-nowrap" data-col-seq="25"><a href="/report/view/?repid-link=33&amp;frameid=0&amp;embeded=true&amp;show_table=1&amp;show_tool=0&amp;show_chart=1&amp;sort=t8" data-sort="t8">รวม</a></th><th class="text-center kv-align-right kv-nowrap" data-col-seq="26"><a href="/report/view/?repid-link=33&amp;frameid=0&amp;embeded=true&amp;show_table=1&amp;show_tool=0&amp;show_chart=1&amp;sort=male_g9" data-sort="male_g9">ชาย</a></th><th class="text-center kv-align-right kv-nowrap" data-col-seq="27"><a href="/report/view/?repid-link=33&amp;frameid=0&amp;embeded=true&amp;show_table=1&amp;show_tool=0&amp;show_chart=1&amp;sort=female_g9" data-sort="female_g9">หญิง</a></th><th class="text-center kv-align-right kv-nowrap" data-col-seq="28"><a href="/report/view/?repid-link=33&amp;frameid=0&amp;embeded=true&amp;show_table=1&amp;show_tool=0&amp;show_chart=1&amp;sort=t9" data-sort="t9">รวม</a></th><th class="text-center kv-align-right kv-nowrap" data-col-seq="29"><a href="/report/view/?repid-link=33&amp;frameid=0&amp;embeded=true&amp;show_table=1&amp;show_tool=0&amp;show_chart=1&amp;sort=male_g10" data-sort="male_g10">ชาย</a></th><th class="text-center kv-align-right kv-nowrap" data-col-seq="30"><a href="/report/view/?repid-link=33&amp;frameid=0&amp;embeded=true&amp;show_table=1&amp;show_tool=0&amp;show_chart=1&amp;sort=female_g10" data-sort="female_g10">หญิง</a></th><th class="text-center kv-align-right kv-nowrap" data-col-seq="31"><a href="/report/view/?repid-link=33&amp;frameid=0&amp;embeded=true&amp;show_table=1&amp;show_tool=0&amp;show_chart=1&amp;sort=t10" data-sort="t10">รวม</a></th><th class="text-center kv-align-right kv-nowrap" data-col-seq="32"><a href="/report/view/?repid-link=33&amp;frameid=0&amp;embeded=true&amp;show_table=1&amp;show_tool=0&amp;show_chart=1&amp;sort=male_g11" data-sort="male_g11">ชาย</a></th><th class="text-center kv-align-right kv-nowrap" data-col-seq="33"><a href="/report/view/?repid-link=33&amp;frameid=0&amp;embeded=true&amp;show_table=1&amp;show_tool=0&amp;show_chart=1&amp;sort=female_g11" data-sort="female_g11">หญิง</a></th><th class="text-center kv-align-right kv-nowrap" data-col-seq="34"><a href="/report/view/?repid-link=33&amp;frameid=0&amp;embeded=true&amp;show_table=1&amp;show_tool=0&amp;show_chart=1&amp;sort=t11" data-sort="t11">รวม</a></th><th class="text-center kv-align-right kv-nowrap" data-col-seq="35"><a href="/report/view/?repid-link=33&amp;frameid=0&amp;embeded=true&amp;show_table=1&amp;show_tool=0&amp;show_chart=1&amp;sort=male_g12" data-sort="male_g12">ชาย</a></th><th class="text-center kv-align-right kv-nowrap" data-col-seq="36"><a href="/report/view/?repid-link=33&amp;frameid=0&amp;embeded=true&amp;show_table=1&amp;show_tool=0&amp;show_chart=1&amp;sort=female_g12" data-sort="female_g12">หญิง</a></th><th class="text-center kv-align-right kv-nowrap" data-col-seq="37"><a href="/report/view/?repid-link=33&amp;frameid=0&amp;embeded=true&amp;show_table=1&amp;show_tool=0&amp;show_chart=1&amp;sort=t12" data-sort="t12">รวม</a></th><th class="text-center kv-align-right kv-nowrap" data-col-seq="38"><a href="/report/view/?repid-link=33&amp;frameid=0&amp;embeded=true&amp;show_table=1&amp;show_tool=0&amp;show_chart=1&amp;sort=male_g13" data-sort="male_g13">ชาย</a></th><th class="text-center kv-align-right kv-nowrap" data-col-seq="39"><a href="/report/view/?repid-link=33&amp;frameid=0&amp;embeded=true&amp;show_table=1&amp;show_tool=0&amp;show_chart=1&amp;sort=female_g13" data-sort="female_g13">หญิง</a></th><th class="text-center kv-align-right kv-nowrap" data-col-seq="40"><a href="/report/view/?repid-link=33&amp;frameid=0&amp;embeded=true&amp;show_table=1&amp;show_tool=0&amp;show_chart=1&amp;sort=t13" data-sort="t13">รวม</a></th><th class="text-center kv-align-right kv-nowrap" data-col-seq="41"><a href="/report/view/?repid-link=33&amp;frameid=0&amp;embeded=true&amp;show_table=1&amp;show_tool=0&amp;show_chart=1&amp;sort=male_g14" data-sort="male_g14">ชาย</a></th><th class="text-center kv-align-right kv-nowrap" data-col-seq="42"><a href="/report/view/?repid-link=33&amp;frameid=0&amp;embeded=true&amp;show_table=1&amp;show_tool=0&amp;show_chart=1&amp;sort=female_g14" data-sort="female_g14">หญิง</a></th><th class="text-center kv-align-right kv-nowrap" data-col-seq="43"><a href="/report/view/?repid-link=33&amp;frameid=0&amp;embeded=true&amp;show_table=1&amp;show_tool=0&amp;show_chart=1&amp;sort=t14" data-sort="t14">รวม</a></th><th class="text-center kv-align-right kv-nowrap" data-col-seq="44"><a href="/report/view/?repid-link=33&amp;frameid=0&amp;embeded=true&amp;show_table=1&amp;show_tool=0&amp;show_chart=1&amp;sort=male_g15" data-sort="male_g15">ชาย</a></th><th class="text-center kv-align-right kv-nowrap" data-col-seq="45"><a href="/report/view/?repid-link=33&amp;frameid=0&amp;embeded=true&amp;show_table=1&amp;show_tool=0&amp;show_chart=1&amp;sort=female_g15" data-sort="female_g15">หญิง</a></th><th class="text-center kv-align-right kv-nowrap" data-col-seq="46"><a href="/report/view/?repid-link=33&amp;frameid=0&amp;embeded=true&amp;show_table=1&amp;show_tool=0&amp;show_chart=1&amp;sort=t15" data-sort="t15">รวม</a></th><th class="text-center kv-align-right kv-nowrap" data-col-seq="47"><a href="/report/view/?repid-link=33&amp;frameid=0&amp;embeded=true&amp;show_table=1&amp;show_tool=0&amp;show_chart=1&amp;sort=male_g16" data-sort="male_g16">ชาย</a></th><th class="text-center kv-align-right kv-nowrap" data-col-seq="48"><a href="/report/view/?repid-link=33&amp;frameid=0&amp;embeded=true&amp;show_table=1&amp;show_tool=0&amp;show_chart=1&amp;sort=female_g16" data-sort="female_g16">หญิง</a></th><th class="text-center kv-align-right kv-nowrap" data-col-seq="49"><a href="/report/view/?repid-link=33&amp;frameid=0&amp;embeded=true&amp;show_table=1&amp;show_tool=0&amp;show_chart=1&amp;sort=t16" data-sort="t16">รวม</a></th><th class="text-center kv-align-right kv-nowrap" data-col-seq="50"><a href="/report/view/?repid-link=33&amp;frameid=0&amp;embeded=true&amp;show_table=1&amp;show_tool=0&amp;show_chart=1&amp;sort=male_g17" data-sort="male_g17">ชาย</a></th><th class="text-center kv-align-right kv-nowrap" data-col-seq="51"><a href="/report/view/?repid-link=33&amp;frameid=0&amp;embeded=true&amp;show_table=1&amp;show_tool=0&amp;show_chart=1&amp;sort=female_g17" data-sort="female_g17">หญิง</a></th><th class="text-center kv-align-right kv-nowrap" data-col-seq="52"><a href="/report/view/?repid-link=33&amp;frameid=0&amp;embeded=true&amp;show_table=1&amp;show_tool=0&amp;show_chart=1&amp;sort=t17" data-sort="t17">รวม</a></th><th class="text-center kv-align-right kv-nowrap" data-col-seq="53"><a href="/report/view/?repid-link=33&amp;frameid=0&amp;embeded=true&amp;show_table=1&amp;show_tool=0&amp;show_chart=1&amp;sort=male_g18" data-sort="male_g18">ชาย</a></th><th class="text-center kv-align-right kv-nowrap" data-col-seq="54"><a href="/report/view/?repid-link=33&amp;frameid=0&amp;embeded=true&amp;show_table=1&amp;show_tool=0&amp;show_chart=1&amp;sort=female_g18" data-sort="female_g18">หญิง</a></th><th class="text-center kv-align-right kv-nowrap" data-col-seq="55"><a href="/report/view/?repid-link=33&amp;frameid=0&amp;embeded=true&amp;show_table=1&amp;show_tool=0&amp;show_chart=1&amp;sort=t18" data-sort="t18">รวม</a></th><th class="text-center kv-align-right kv-nowrap" data-col-seq="56"><a href="/report/view/?repid-link=33&amp;frameid=0&amp;embeded=true&amp;show_table=1&amp;show_tool=0&amp;show_chart=1&amp;sort=male_g19" data-sort="male_g19">ชาย</a></th><th class="text-center kv-align-right kv-nowrap" data-col-seq="57"><a href="/report/view/?repid-link=33&amp;frameid=0&amp;embeded=true&amp;show_table=1&amp;show_tool=0&amp;show_chart=1&amp;sort=female_g19" data-sort="female_g19">หญิง</a></th><th class="text-center kv-align-right kv-nowrap" data-col-seq="58"><a href="/report/view/?repid-link=33&amp;frameid=0&amp;embeded=true&amp;show_table=1&amp;show_tool=0&amp;show_chart=1&amp;sort=t19" data-sort="t19">รวม</a></th><th class="text-center kv-align-right kv-nowrap" data-col-seq="59"><a href="/report/view/?repid-link=33&amp;frameid=0&amp;embeded=true&amp;show_table=1&amp;show_tool=0&amp;show_chart=1&amp;sort=male_g20" data-sort="male_g20">ชาย</a></th><th class="text-center kv-align-right kv-nowrap" data-col-seq="60"><a href="/report/view/?repid-link=33&amp;frameid=0&amp;embeded=true&amp;show_table=1&amp;show_tool=0&amp;show_chart=1&amp;sort=female_g20" data-sort="female_g20">หญิง</a></th><th class="text-center kv-align-right kv-nowrap" data-col-seq="61"><a href="/report/view/?repid-link=33&amp;frameid=0&amp;embeded=true&amp;show_table=1&amp;show_tool=0&amp;show_chart=1&amp;sort=t20" data-sort="t20">รวม</a></th><th class="text-center kv-align-right kv-nowrap" data-col-seq="62"><a href="/report/view/?repid-link=33&amp;frameid=0&amp;embeded=true&amp;show_table=1&amp;show_tool=0&amp;show_chart=1&amp;sort=male_g21" data-sort="male_g21">ชาย</a></th><th class="text-center kv-align-right kv-nowrap" data-col-seq="63"><a href="/report/view/?repid-link=33&amp;frameid=0&amp;embeded=true&amp;show_table=1&amp;show_tool=0&amp;show_chart=1&amp;sort=female_g21" data-sort="female_g21">หญิง</a></th><th class="text-center kv-align-right kv-nowrap" data-col-seq="64"><a href="/report/view/?repid-link=33&amp;frameid=0&amp;embeded=true&amp;show_table=1&amp;show_tool=0&amp;show_chart=1&amp;sort=t21" data-sort="t21">รวม</a></th><th class="text-center kv-align-right kv-nowrap" data-col-seq="65"><a href="/report/view/?repid-link=33&amp;frameid=0&amp;embeded=true&amp;show_table=1&amp;show_tool=0&amp;show_chart=1&amp;sort=male_g22" data-sort="male_g22">ชาย</a></th><th class="text-center kv-align-right kv-nowrap" data-col-seq="66"><a href="/report/view/?repid-link=33&amp;frameid=0&amp;embeded=true&amp;show_table=1&amp;show_tool=0&amp;show_chart=1&amp;sort=female_g22" data-sort="female_g22">หญิง</a></th><th class="text-center kv-align-right kv-nowrap" data-col-seq="67"><a href="/report/view/?repid-link=33&amp;frameid=0&amp;embeded=true&amp;show_table=1&amp;show_tool=0&amp;show_chart=1&amp;sort=t22" data-sort="t22">รวม</a></th><th class="text-center kv-align-right kv-nowrap" data-col-seq="68"><a href="/report/view/?repid-link=33&amp;frameid=0&amp;embeded=true&amp;show_table=1&amp;show_tool=0&amp;show_chart=1&amp;sort=total" data-sort="total">รวมประชากร</a></th></tr>
+
+                    </thead>
+                        <tbody>
+                        <tr data-key="0"><td class="kv-align-center kv-align-middle" style="width:50px;" data-col-seq="0">1</td><td class="kv-nowrap" data-col-seq="1">หอย</td><td class="kv-align-right kv-nowrap" data-col-seq="2">6</td><td class="kv-align-right kv-nowrap" data-col-seq="3">2</td><td class="kv-align-right kv-nowrap" data-col-seq="4">8</td><td class="kv-align-right kv-nowrap" data-col-seq="5">27</td><td class="kv-align-right kv-nowrap" data-col-seq="6">22</td><td class="kv-align-right kv-nowrap" data-col-seq="7">49</td><td class="kv-align-right kv-nowrap" data-col-seq="8">35</td><td class="kv-align-right kv-nowrap" data-col-seq="9">29</td><td class="kv-align-right kv-nowrap" data-col-seq="10">64</td><td class="kv-align-right kv-nowrap" data-col-seq="11">42</td><td class="kv-align-right kv-nowrap" data-col-seq="12">34</td><td class="kv-align-right kv-nowrap" data-col-seq="13">76</td><td class="kv-align-right kv-nowrap" data-col-seq="14">25</td><td class="kv-align-right kv-nowrap" data-col-seq="15">25</td><td class="kv-align-right kv-nowrap" data-col-seq="16">50</td><td class="kv-align-right kv-nowrap" data-col-seq="17">18</td><td class="kv-align-right kv-nowrap" data-col-seq="18">23</td><td class="kv-align-right kv-nowrap" data-col-seq="19">41</td><td class="kv-align-right kv-nowrap" data-col-seq="20">23</td><td class="kv-align-right kv-nowrap" data-col-seq="21">22</td><td class="kv-align-right kv-nowrap" data-col-seq="22">45</td><td class="kv-align-right kv-nowrap" data-col-seq="23">26</td><td class="kv-align-right kv-nowrap" data-col-seq="24">22</td><td class="kv-align-right kv-nowrap" data-col-seq="25">48</td><td class="kv-align-right kv-nowrap" data-col-seq="26">20</td><td class="kv-align-right kv-nowrap" data-col-seq="27">19</td><td class="kv-align-right kv-nowrap" data-col-seq="28">39</td><td class="kv-align-right kv-nowrap" data-col-seq="29">11</td><td class="kv-align-right kv-nowrap" data-col-seq="30">27</td><td class="kv-align-right kv-nowrap" data-col-seq="31">38</td><td class="kv-align-right kv-nowrap" data-col-seq="32">35</td><td class="kv-align-right kv-nowrap" data-col-seq="33">31</td><td class="kv-align-right kv-nowrap" data-col-seq="34">66</td><td class="kv-align-right kv-nowrap" data-col-seq="35">29</td><td class="kv-align-right kv-nowrap" data-col-seq="36">40</td><td class="kv-align-right kv-nowrap" data-col-seq="37">69</td><td class="kv-align-right kv-nowrap" data-col-seq="38">25</td><td class="kv-align-right kv-nowrap" data-col-seq="39">33</td><td class="kv-align-right kv-nowrap" data-col-seq="40">58</td><td class="kv-align-right kv-nowrap" data-col-seq="41">22</td><td class="kv-align-right kv-nowrap" data-col-seq="42">20</td><td class="kv-align-right kv-nowrap" data-col-seq="43">42</td><td class="kv-align-right kv-nowrap" data-col-seq="44">18</td><td class="kv-align-right kv-nowrap" data-col-seq="45">14</td><td class="kv-align-right kv-nowrap" data-col-seq="46">32</td><td class="kv-align-right kv-nowrap" data-col-seq="47">5</td><td class="kv-align-right kv-nowrap" data-col-seq="48">9</td><td class="kv-align-right kv-nowrap" data-col-seq="49">14</td><td class="kv-align-right kv-nowrap" data-col-seq="50">8</td><td class="kv-align-right kv-nowrap" data-col-seq="51">13</td><td class="kv-align-right kv-nowrap" data-col-seq="52">21</td><td class="kv-align-right kv-nowrap" data-col-seq="53">5</td><td class="kv-align-right kv-nowrap" data-col-seq="54">6</td><td class="kv-align-right kv-nowrap" data-col-seq="55">11</td><td class="kv-align-right kv-nowrap" data-col-seq="56">1</td><td class="kv-align-right kv-nowrap" data-col-seq="57">7</td><td class="kv-align-right kv-nowrap" data-col-seq="58">8</td><td class="kv-align-right kv-nowrap" data-col-seq="59">1</td><td class="kv-align-right kv-nowrap" data-col-seq="60">0</td><td class="kv-align-right kv-nowrap" data-col-seq="61">1</td><td class="kv-align-right kv-nowrap" data-col-seq="62">0</td><td class="kv-align-right kv-nowrap" data-col-seq="63">0</td><td class="kv-align-right kv-nowrap" data-col-seq="64">0</td><td class="kv-align-right kv-nowrap" data-col-seq="65">0</td><td class="kv-align-right kv-nowrap" data-col-seq="66">0</td><td class="kv-align-right kv-nowrap" data-col-seq="67">0</td><td class="kv-align-right kv-nowrap" data-col-seq="68">780</td></tr>
+                        <tr data-key="1"><td class="kv-align-center kv-align-middle" style="width:50px;" data-col-seq="0">2</td><td class="kv-nowrap" data-col-seq="1">หนองเตียน</td><td class="kv-align-right kv-nowrap" data-col-seq="2">5</td><td class="kv-align-right kv-nowrap" data-col-seq="3">3</td><td class="kv-align-right kv-nowrap" data-col-seq="4">8</td><td class="kv-align-right kv-nowrap" data-col-seq="5">10</td><td class="kv-align-right kv-nowrap" data-col-seq="6">16</td><td class="kv-align-right kv-nowrap" data-col-seq="7">26</td><td class="kv-align-right kv-nowrap" data-col-seq="8">27</td><td class="kv-align-right kv-nowrap" data-col-seq="9">29</td><td class="kv-align-right kv-nowrap" data-col-seq="10">56</td><td class="kv-align-right kv-nowrap" data-col-seq="11">30</td><td class="kv-align-right kv-nowrap" data-col-seq="12">23</td><td class="kv-align-right kv-nowrap" data-col-seq="13">53</td><td class="kv-align-right kv-nowrap" data-col-seq="14">25</td><td class="kv-align-right kv-nowrap" data-col-seq="15">34</td><td class="kv-align-right kv-nowrap" data-col-seq="16">59</td><td class="kv-align-right kv-nowrap" data-col-seq="17">20</td><td class="kv-align-right kv-nowrap" data-col-seq="18">26</td><td class="kv-align-right kv-nowrap" data-col-seq="19">46</td><td class="kv-align-right kv-nowrap" data-col-seq="20">27</td><td class="kv-align-right kv-nowrap" data-col-seq="21">19</td><td class="kv-align-right kv-nowrap" data-col-seq="22">46</td><td class="kv-align-right kv-nowrap" data-col-seq="23">15</td><td class="kv-align-right kv-nowrap" data-col-seq="24">21</td><td class="kv-align-right kv-nowrap" data-col-seq="25">36</td><td class="kv-align-right kv-nowrap" data-col-seq="26">15</td><td class="kv-align-right kv-nowrap" data-col-seq="27">20</td><td class="kv-align-right kv-nowrap" data-col-seq="28">35</td><td class="kv-align-right kv-nowrap" data-col-seq="29">31</td><td class="kv-align-right kv-nowrap" data-col-seq="30">22</td><td class="kv-align-right kv-nowrap" data-col-seq="31">53</td><td class="kv-align-right kv-nowrap" data-col-seq="32">21</td><td class="kv-align-right kv-nowrap" data-col-seq="33">39</td><td class="kv-align-right kv-nowrap" data-col-seq="34">60</td><td class="kv-align-right kv-nowrap" data-col-seq="35">29</td><td class="kv-align-right kv-nowrap" data-col-seq="36">29</td><td class="kv-align-right kv-nowrap" data-col-seq="37">58</td><td class="kv-align-right kv-nowrap" data-col-seq="38">26</td><td class="kv-align-right kv-nowrap" data-col-seq="39">32</td><td class="kv-align-right kv-nowrap" data-col-seq="40">58</td><td class="kv-align-right kv-nowrap" data-col-seq="41">20</td><td class="kv-align-right kv-nowrap" data-col-seq="42">18</td><td class="kv-align-right kv-nowrap" data-col-seq="43">38</td><td class="kv-align-right kv-nowrap" data-col-seq="44">10</td><td class="kv-align-right kv-nowrap" data-col-seq="45">18</td><td class="kv-align-right kv-nowrap" data-col-seq="46">28</td><td class="kv-align-right kv-nowrap" data-col-seq="47">10</td><td class="kv-align-right kv-nowrap" data-col-seq="48">14</td><td class="kv-align-right kv-nowrap" data-col-seq="49">24</td><td class="kv-align-right kv-nowrap" data-col-seq="50">6</td><td class="kv-align-right kv-nowrap" data-col-seq="51">11</td><td class="kv-align-right kv-nowrap" data-col-seq="52">17</td><td class="kv-align-right kv-nowrap" data-col-seq="53">4</td><td class="kv-align-right kv-nowrap" data-col-seq="54">8</td><td class="kv-align-right kv-nowrap" data-col-seq="55">12</td><td class="kv-align-right kv-nowrap" data-col-seq="56">3</td><td class="kv-align-right kv-nowrap" data-col-seq="57">5</td><td class="kv-align-right kv-nowrap" data-col-seq="58">8</td><td class="kv-align-right kv-nowrap" data-col-seq="59">2</td><td class="kv-align-right kv-nowrap" data-col-seq="60">1</td><td class="kv-align-right kv-nowrap" data-col-seq="61">3</td><td class="kv-align-right kv-nowrap" data-col-seq="62">0</td><td class="kv-align-right kv-nowrap" data-col-seq="63">0</td><td class="kv-align-right kv-nowrap" data-col-seq="64">0</td><td class="kv-align-right kv-nowrap" data-col-seq="65">0</td><td class="kv-align-right kv-nowrap" data-col-seq="66">0</td><td class="kv-align-right kv-nowrap" data-col-seq="67">0</td><td class="kv-align-right kv-nowrap" data-col-seq="68">724</td></tr>
+                        <tr data-key="2"><td class="kv-align-center kv-align-middle" style="width:50px;" data-col-seq="0">3</td><td class="kv-nowrap" data-col-seq="1">เนินไฮ</td><td class="kv-align-right kv-nowrap" data-col-seq="2">3</td><td class="kv-align-right kv-nowrap" data-col-seq="3">3</td><td class="kv-align-right kv-nowrap" data-col-seq="4">6</td><td class="kv-align-right kv-nowrap" data-col-seq="5">14</td><td class="kv-align-right kv-nowrap" data-col-seq="6">15</td><td class="kv-align-right kv-nowrap" data-col-seq="7">29</td><td class="kv-align-right kv-nowrap" data-col-seq="8">20</td><td class="kv-align-right kv-nowrap" data-col-seq="9">23</td><td class="kv-align-right kv-nowrap" data-col-seq="10">43</td><td class="kv-align-right kv-nowrap" data-col-seq="11">31</td><td class="kv-align-right kv-nowrap" data-col-seq="12">20</td><td class="kv-align-right kv-nowrap" data-col-seq="13">51</td><td class="kv-align-right kv-nowrap" data-col-seq="14">22</td><td class="kv-align-right kv-nowrap" data-col-seq="15">27</td><td class="kv-align-right kv-nowrap" data-col-seq="16">49</td><td class="kv-align-right kv-nowrap" data-col-seq="17">17</td><td class="kv-align-right kv-nowrap" data-col-seq="18">22</td><td class="kv-align-right kv-nowrap" data-col-seq="19">39</td><td class="kv-align-right kv-nowrap" data-col-seq="20">25</td><td class="kv-align-right kv-nowrap" data-col-seq="21">22</td><td class="kv-align-right kv-nowrap" data-col-seq="22">47</td><td class="kv-align-right kv-nowrap" data-col-seq="23">12</td><td class="kv-align-right kv-nowrap" data-col-seq="24">13</td><td class="kv-align-right kv-nowrap" data-col-seq="25">25</td><td class="kv-align-right kv-nowrap" data-col-seq="26">22</td><td class="kv-align-right kv-nowrap" data-col-seq="27">14</td><td class="kv-align-right kv-nowrap" data-col-seq="28">36</td><td class="kv-align-right kv-nowrap" data-col-seq="29">25</td><td class="kv-align-right kv-nowrap" data-col-seq="30">16</td><td class="kv-align-right kv-nowrap" data-col-seq="31">41</td><td class="kv-align-right kv-nowrap" data-col-seq="32">15</td><td class="kv-align-right kv-nowrap" data-col-seq="33">36</td><td class="kv-align-right kv-nowrap" data-col-seq="34">51</td><td class="kv-align-right kv-nowrap" data-col-seq="35">33</td><td class="kv-align-right kv-nowrap" data-col-seq="36">26</td><td class="kv-align-right kv-nowrap" data-col-seq="37">59</td><td class="kv-align-right kv-nowrap" data-col-seq="38">23</td><td class="kv-align-right kv-nowrap" data-col-seq="39">38</td><td class="kv-align-right kv-nowrap" data-col-seq="40">61</td><td class="kv-align-right kv-nowrap" data-col-seq="41">10</td><td class="kv-align-right kv-nowrap" data-col-seq="42">15</td><td class="kv-align-right kv-nowrap" data-col-seq="43">25</td><td class="kv-align-right kv-nowrap" data-col-seq="44">9</td><td class="kv-align-right kv-nowrap" data-col-seq="45">10</td><td class="kv-align-right kv-nowrap" data-col-seq="46">19</td><td class="kv-align-right kv-nowrap" data-col-seq="47">11</td><td class="kv-align-right kv-nowrap" data-col-seq="48">10</td><td class="kv-align-right kv-nowrap" data-col-seq="49">21</td><td class="kv-align-right kv-nowrap" data-col-seq="50">4</td><td class="kv-align-right kv-nowrap" data-col-seq="51">7</td><td class="kv-align-right kv-nowrap" data-col-seq="52">11</td><td class="kv-align-right kv-nowrap" data-col-seq="53">3</td><td class="kv-align-right kv-nowrap" data-col-seq="54">7</td><td class="kv-align-right kv-nowrap" data-col-seq="55">10</td><td class="kv-align-right kv-nowrap" data-col-seq="56">1</td><td class="kv-align-right kv-nowrap" data-col-seq="57">3</td><td class="kv-align-right kv-nowrap" data-col-seq="58">4</td><td class="kv-align-right kv-nowrap" data-col-seq="59">0</td><td class="kv-align-right kv-nowrap" data-col-seq="60">2</td><td class="kv-align-right kv-nowrap" data-col-seq="61">2</td><td class="kv-align-right kv-nowrap" data-col-seq="62">2</td><td class="kv-align-right kv-nowrap" data-col-seq="63">0</td><td class="kv-align-right kv-nowrap" data-col-seq="64">2</td><td class="kv-align-right kv-nowrap" data-col-seq="65">0</td><td class="kv-align-right kv-nowrap" data-col-seq="66">0</td><td class="kv-align-right kv-nowrap" data-col-seq="67">0</td><td class="kv-align-right kv-nowrap" data-col-seq="68">631</td></tr>
+                        <tr data-key="3"><td class="kv-align-center kv-align-middle" style="width:50px;" data-col-seq="0">4</td><td class="kv-nowrap" data-col-seq="1">ทุ่งแฝก</td><td class="kv-align-right kv-nowrap" data-col-seq="2">2</td><td class="kv-align-right kv-nowrap" data-col-seq="3">2</td><td class="kv-align-right kv-nowrap" data-col-seq="4">4</td><td class="kv-align-right kv-nowrap" data-col-seq="5">16</td><td class="kv-align-right kv-nowrap" data-col-seq="6">11</td><td class="kv-align-right kv-nowrap" data-col-seq="7">27</td><td class="kv-align-right kv-nowrap" data-col-seq="8">19</td><td class="kv-align-right kv-nowrap" data-col-seq="9">9</td><td class="kv-align-right kv-nowrap" data-col-seq="10">28</td><td class="kv-align-right kv-nowrap" data-col-seq="11">14</td><td class="kv-align-right kv-nowrap" data-col-seq="12">11</td><td class="kv-align-right kv-nowrap" data-col-seq="13">25</td><td class="kv-align-right kv-nowrap" data-col-seq="14">15</td><td class="kv-align-right kv-nowrap" data-col-seq="15">18</td><td class="kv-align-right kv-nowrap" data-col-seq="16">33</td><td class="kv-align-right kv-nowrap" data-col-seq="17">8</td><td class="kv-align-right kv-nowrap" data-col-seq="18">10</td><td class="kv-align-right kv-nowrap" data-col-seq="19">18</td><td class="kv-align-right kv-nowrap" data-col-seq="20">3</td><td class="kv-align-right kv-nowrap" data-col-seq="21">10</td><td class="kv-align-right kv-nowrap" data-col-seq="22">13</td><td class="kv-align-right kv-nowrap" data-col-seq="23">10</td><td class="kv-align-right kv-nowrap" data-col-seq="24">5</td><td class="kv-align-right kv-nowrap" data-col-seq="25">15</td><td class="kv-align-right kv-nowrap" data-col-seq="26">14</td><td class="kv-align-right kv-nowrap" data-col-seq="27">9</td><td class="kv-align-right kv-nowrap" data-col-seq="28">23</td><td class="kv-align-right kv-nowrap" data-col-seq="29">12</td><td class="kv-align-right kv-nowrap" data-col-seq="30">6</td><td class="kv-align-right kv-nowrap" data-col-seq="31">18</td><td class="kv-align-right kv-nowrap" data-col-seq="32">10</td><td class="kv-align-right kv-nowrap" data-col-seq="33">14</td><td class="kv-align-right kv-nowrap" data-col-seq="34">24</td><td class="kv-align-right kv-nowrap" data-col-seq="35">12</td><td class="kv-align-right kv-nowrap" data-col-seq="36">17</td><td class="kv-align-right kv-nowrap" data-col-seq="37">29</td><td class="kv-align-right kv-nowrap" data-col-seq="38">13</td><td class="kv-align-right kv-nowrap" data-col-seq="39">9</td><td class="kv-align-right kv-nowrap" data-col-seq="40">22</td><td class="kv-align-right kv-nowrap" data-col-seq="41">5</td><td class="kv-align-right kv-nowrap" data-col-seq="42">8</td><td class="kv-align-right kv-nowrap" data-col-seq="43">13</td><td class="kv-align-right kv-nowrap" data-col-seq="44">5</td><td class="kv-align-right kv-nowrap" data-col-seq="45">5</td><td class="kv-align-right kv-nowrap" data-col-seq="46">10</td><td class="kv-align-right kv-nowrap" data-col-seq="47">5</td><td class="kv-align-right kv-nowrap" data-col-seq="48">4</td><td class="kv-align-right kv-nowrap" data-col-seq="49">9</td><td class="kv-align-right kv-nowrap" data-col-seq="50">3</td><td class="kv-align-right kv-nowrap" data-col-seq="51">5</td><td class="kv-align-right kv-nowrap" data-col-seq="52">8</td><td class="kv-align-right kv-nowrap" data-col-seq="53">1</td><td class="kv-align-right kv-nowrap" data-col-seq="54">4</td><td class="kv-align-right kv-nowrap" data-col-seq="55">5</td><td class="kv-align-right kv-nowrap" data-col-seq="56">0</td><td class="kv-align-right kv-nowrap" data-col-seq="57">0</td><td class="kv-align-right kv-nowrap" data-col-seq="58">0</td><td class="kv-align-right kv-nowrap" data-col-seq="59">0</td><td class="kv-align-right kv-nowrap" data-col-seq="60">0</td><td class="kv-align-right kv-nowrap" data-col-seq="61">0</td><td class="kv-align-right kv-nowrap" data-col-seq="62">0</td><td class="kv-align-right kv-nowrap" data-col-seq="63">1</td><td class="kv-align-right kv-nowrap" data-col-seq="64">1</td><td class="kv-align-right kv-nowrap" data-col-seq="65">0</td><td class="kv-align-right kv-nowrap" data-col-seq="66">0</td><td class="kv-align-right kv-nowrap" data-col-seq="67">0</td><td class="kv-align-right kv-nowrap" data-col-seq="68">325</td></tr>
+                        </tbody><tfoot>
+                        <tr class="kv-page-summary panel panel-default"><td class="kv-align-center kv-align-middle" style="width:50px;">&nbsp;</td><td class="kv-nowrap">&nbsp;</td><td class="kv-align-right kv-nowrap">16</td><td class="kv-align-right kv-nowrap">10</td><td class="kv-align-right kv-nowrap">26</td><td class="kv-align-right kv-nowrap">67</td><td class="kv-align-right kv-nowrap">64</td><td class="kv-align-right kv-nowrap">131</td><td class="kv-align-right kv-nowrap">101</td><td class="kv-align-right kv-nowrap">90</td><td class="kv-align-right kv-nowrap">191</td><td class="kv-align-right kv-nowrap">117</td><td class="kv-align-right kv-nowrap">88</td><td class="kv-align-right kv-nowrap">205</td><td class="kv-align-right kv-nowrap">87</td><td class="kv-align-right kv-nowrap">104</td><td class="kv-align-right kv-nowrap">191</td><td class="kv-align-right kv-nowrap">63</td><td class="kv-align-right kv-nowrap">81</td><td class="kv-align-right kv-nowrap">144</td><td class="kv-align-right kv-nowrap">78</td><td class="kv-align-right kv-nowrap">73</td><td class="kv-align-right kv-nowrap">151</td><td class="kv-align-right kv-nowrap">63</td><td class="kv-align-right kv-nowrap">61</td><td class="kv-align-right kv-nowrap">124</td><td class="kv-align-right kv-nowrap">71</td><td class="kv-align-right kv-nowrap">62</td><td class="kv-align-right kv-nowrap">133</td><td class="kv-align-right kv-nowrap">79</td><td class="kv-align-right kv-nowrap">71</td><td class="kv-align-right kv-nowrap">150</td><td class="kv-align-right kv-nowrap">81</td><td class="kv-align-right kv-nowrap">120</td><td class="kv-align-right kv-nowrap">201</td><td class="kv-align-right kv-nowrap">103</td><td class="kv-align-right kv-nowrap">112</td><td class="kv-align-right kv-nowrap">215</td><td class="kv-align-right kv-nowrap">87</td><td class="kv-align-right kv-nowrap">112</td><td class="kv-align-right kv-nowrap">199</td><td class="kv-align-right kv-nowrap">57</td><td class="kv-align-right kv-nowrap">61</td><td class="kv-align-right kv-nowrap">118</td><td class="kv-align-right kv-nowrap">42</td><td class="kv-align-right kv-nowrap">47</td><td class="kv-align-right kv-nowrap">89</td><td class="kv-align-right kv-nowrap">31</td><td class="kv-align-right kv-nowrap">37</td><td class="kv-align-right kv-nowrap">68</td><td class="kv-align-right kv-nowrap">21</td><td class="kv-align-right kv-nowrap">36</td><td class="kv-align-right kv-nowrap">57</td><td class="kv-align-right kv-nowrap">13</td><td class="kv-align-right kv-nowrap">25</td><td class="kv-align-right kv-nowrap">38</td><td class="kv-align-right kv-nowrap">5</td><td class="kv-align-right kv-nowrap">15</td><td class="kv-align-right kv-nowrap">20</td><td class="kv-align-right kv-nowrap">3</td><td class="kv-align-right kv-nowrap">3</td><td class="kv-align-right kv-nowrap">6</td><td class="kv-align-right kv-nowrap">2</td><td class="kv-align-right kv-nowrap">1</td><td class="kv-align-right kv-nowrap">3</td><td class="kv-align-right kv-nowrap">0</td><td class="kv-align-right kv-nowrap">0</td><td class="kv-align-right kv-nowrap">0</td><td class="kv-align-right kv-nowrap">2,460</td></tr>
+                        </tfoot></table></div>
+                    <div class="kv-panel-after"></div>
+
+                </div></div></div>
+
+                <!--            </div>-->
+                <!--            <div class="panel-body">-->
+
+                <div class="panel panel-default">
+                    <!--        <div class="panel-heading">-->
+                    <!--            <h3 class="panel-title"><i class="fa fa-line-chart"></i> --><? //= $remark ?><!--</h3>-->
+                    <!---->
+                    <!--        </div>-->
+                    <div class="panel panel-body panel-chart">
+                        <div class="col-md-12 col-sm-12">
+
+
+                            <div id="c1"></div>        </div>
+                        <div class="col-md-1 col-sm-1 text-center invisible" style="display: none">
+                            YEAR
+                            <h4 class="big" id="clb1c1"><a href="javascript:void(0);" id="cl1c1">2559</a></h4>
+                            <h4 id="clb2c1"><a href="javascript:void(0);" id="cl2c1">2558</a></h4>
+                            <h4 id="clb3c1"><a href="javascript:void(0);" id="cl3c1">2557</a></h4>
+                            <h4 id="clb4c1"><a href="javascript:void(0);" id="cl4c1">2556</a></h4>
+                            <button class="btn btn-sm btn-primary btn-icon" id="playpausec1"><i class="fa fa-play" id="playpause_ic1"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <!--        </div>-->
+
+
+
+        </div>
+
+
+    </div>
+
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    <script type="text/javascript">
+        parent.AdjustIframeHeight(0, document.getElementById("page-container").scrollHeight);
+    </script>
+
+</div>
+
+<script src="/assets/c9b60759/jquery.js?v=1464500108"></script>
+<script src="/js/activeresponse.js"></script>
+<script src="/themes/quirk/lib/jquery.gritter/jquery.gritter.js"></script>
+<script src="/assets/f5dea82b/js/query-builder.standalone.min.js?v=1464500108"></script>
+<script src="/assets/190627ae/yii.js?v=1464500108"></script>
+<script src="/assets/190627ae/yii.activeForm.js?v=1464500108"></script>
+<script src="/assets/cbf9bb8c/js/bootstrap.js?v=1464500108"></script>
+<script src="/assets/e9933336/js/kv-grid-export.min.js?v=1464500108"></script>
+<script src="/assets/190627ae/yii.gridView.js?v=1464500108"></script>
+<script src="/assets/76f155e0/jquery.pjax.js?v=1464500180"></script>
+<script src="/assets/bd5e50b1/highcharts.js?v=1464500804"></script>
+<script src="/themes/quirk/lib/jquery-toggles/toggles.js?v=1449231606"></script>
+<script src="/themes/quirk/lib/raphael/raphael.js?v=1449231566"></script>
+<script src="/themes/quirk/lib/jquery-knob/jquery.knob.js?v=1449231619"></script>
+<script src="/themes/quirk/js/quirk.js?v=1449231692"></script>
+<script type="text/javascript">jQuery(document).ready(function () {
+    jQuery('#query-builder').queryBuilder({"allow_empty":true,"filters":[{"id":"หมู่บ้าน","label":"หมู่บ้าน","type":"string"},{"id":"male_g1","label":"ชาย","type":"string"},{"id":"female_g1","label":"หญิง","type":"string"},{"id":"t1","label":"รวม","type":"string"},{"id":"male_g2","label":"ชาย","type":"string"},{"id":"female_g2","label":"หญิง","type":"string"},{"id":"t2","label":"รวม","type":"string"},{"id":"male_g3","label":"ชาย","type":"string"},{"id":"female_g3","label":"หญิง","type":"string"},{"id":"t3","label":"รวม","type":"string"},{"id":"male_g4","label":"ชาย","type":"string"},{"id":"female_g4","label":"หญิง","type":"string"},{"id":"t4","label":"รวม","type":"string"},{"id":"male_g5","label":"ชาย","type":"string"},{"id":"female_g5","label":"หญิง","type":"string"},{"id":"t5","label":"รวม","type":"string"},{"id":"male_g6","label":"ชาย","type":"string"},{"id":"female_g6","label":"หญิง","type":"string"},{"id":"t6","label":"รวม","type":"string"},{"id":"male_g7","label":"ชาย","type":"string"},{"id":"female_g7","label":"หญิง","type":"string"},{"id":"t7","label":"รวม","type":"string"},{"id":"male_g8","label":"ชาย","type":"string"},{"id":"female_g8","label":"หญิง","type":"string"},{"id":"t8","label":"รวม","type":"string"},{"id":"male_g9","label":"ชาย","type":"string"},{"id":"female_g9","label":"หญิง","type":"string"},{"id":"t9","label":"รวม","type":"string"},{"id":"male_g10","label":"ชาย","type":"string"},{"id":"female_g10","label":"หญิง","type":"string"},{"id":"t10","label":"รวม","type":"string"},{"id":"male_g11","label":"ชาย","type":"string"},{"id":"female_g11","label":"หญิง","type":"string"},{"id":"t11","label":"รวม","type":"string"},{"id":"male_g12","label":"ชาย","type":"string"},{"id":"female_g12","label":"หญิง","type":"string"},{"id":"t12","label":"รวม","type":"string"},{"id":"male_g13","label":"ชาย","type":"string"},{"id":"female_g13","label":"หญิง","type":"string"},{"id":"t13","label":"รวม","type":"string"},{"id":"male_g14","label":"ชาย","type":"string"},{"id":"female_g14","label":"หญิง","type":"string"},{"id":"t14","label":"รวม","type":"string"},{"id":"male_g15","label":"ชาย","type":"string"},{"id":"female_g15","label":"หญิง","type":"string"},{"id":"t15","label":"รวม","type":"string"},{"id":"male_g16","label":"ชาย","type":"string"},{"id":"female_g16","label":"หญิง","type":"string"},{"id":"t16","label":"รวม","type":"string"},{"id":"male_g17","label":"ชาย","type":"string"},{"id":"female_g17","label":"หญิง","type":"string"},{"id":"t17","label":"รวม","type":"string"},{"id":"male_g18","label":"ชาย","type":"string"},{"id":"female_g18","label":"หญิง","type":"string"},{"id":"t18","label":"รวม","type":"string"},{"id":"male_g19","label":"ชาย","type":"string"},{"id":"female_g19","label":"หญิง","type":"string"},{"id":"t19","label":"รวม","type":"string"},{"id":"male_g20","label":"ชาย","type":"string"},{"id":"female_g20","label":"หญิง","type":"string"},{"id":"t20","label":"รวม","type":"string"},{"id":"male_g21","label":"ชาย","type":"string"},{"id":"female_g21","label":"หญิง","type":"string"},{"id":"t21","label":"รวม","type":"string"},{"id":"male_g22","label":"ชาย","type":"string"},{"id":"female_g22","label":"หญิง","type":"string"},{"id":"t22","label":"รวม","type":"string"},{"id":"total","label":"รวมประชากร","type":"string"}]});
+    var frmW0Querybuilder = $('#w0');
+    var btnW0QuerybuilderReset = frmW0Querybuilder.find('button:reset:first');
+    if (btnW0QuerybuilderReset.length){
+        btnW0QuerybuilderReset.on('click', function(){
+            $('#query-builder').queryBuilder('reset');
+        });
+    }
+    frmW0Querybuilder.on('submit', function(){
+        var rules = $('#query-builder').queryBuilder('getRules');
+        if ($.isEmptyObject(rules)) {
+            return false;
+        } else {
+            var input = $(this).find("input[name='rules']:first");
+            input.val(JSON.stringify(rules));
+        }
+    });
+    jQuery('#link-submit').yiiActiveForm([], []);
+    var kvGridInit_d20f8a8a=function(){
+        $('#w1 .export-html').gridexport(kvGridExp_8612284e);$('#w1 .export-csv').gridexport(kvGridExp_c3a890f6);$('#w1 .export-txt').gridexport(kvGridExp_ae5e3a8a);$('#w1 .export-xls').gridexport(kvGridExp_d03a083b);$('#w1 .export-pdf').gridexport(kvGridExp_3775ba9f);$('#w1 .export-json').gridexport(kvGridExp_0eaa127d);$('#w1-togdata-page').on('pjax:click',function(e){
+            if(!window.confirm('There are 4 records. Are you sure you want to display them all?')){e.preventDefault();}
+        });
+    };
+    kvGridInit_d20f8a8a();
+    jQuery('#w2').button();
+    jQuery("#w1-pjax").on('pjax:timeout', function(e){e.preventDefault()}).on('pjax:send', function(){jQuery("#w1-container").addClass('kv-grid-loading')}).off('pjax:complete.47fffbb1').on('pjax:complete.47fffbb1', function(){setTimeout(kvGridInit_d20f8a8a, 2500);jQuery("#w1-container").removeClass('kv-grid-loading');});
+    jQuery('#w1').yiiGridView({"filterUrl":"\/report\/view\/?repid-link=33\u0026frameid=0\u0026embeded=true\u0026show_table=1\u0026show_tool=0\u0026show_chart=1\u0026frameid=0\u0026embeded=true","filterSelector":"#w1-filters input, #w1-filters select"});
+    jQuery(document).pjax("#w1-pjax a", "#w1-pjax", {"push":true,"replace":false,"timeout":1000,"scrollTo":false});
+    jQuery(document).on('submit', "#w1-pjax form[data-pjax]", function (event) {jQuery.pjax.submit(event, '#w1-pjax', {"push":true,"replace":false,"timeout":1000,"scrollTo":false});});
+    Highcharts.setOptions([]); new Highcharts.Chart({"chart":{"renderTo":"c1"},"title":{"text":" ประชากรจำแนกเพศ กลุ่มอายุรายปี เขตพื้นที่รับผิดชอบ รพ.สต.ท่าแยก ตำบลท่าแยก ปีงบประมาณ 2559"},"xAxis":{"categories":["น้อยกว่า 1 ปี","1-4 ปี","5-9 ปี","10-14 ปี","15-19 ปี","20-24 ปี","25-29 ปี","30-34 ปี","35-39 ปี","40-44 ปี","45-49 ปี","50-54 ปี","55-59 ปี","60-64 ปี","65-69 ปี","70-74 ปี","75-79 ปี","80-84 ปี","85-89 ปี","90-94 ปี","95-99 ปี","100 ปีขึ้นไป"]},"colors":["#058DC7","#50B432","#ED561B","#DDDF00","#24CBE5","#64E572","#FF9655","#FFF263","#6AF9C4"],"yAxis":{"title":{"text":"จำนวนรับบริการ (ครั้ง)"}},"credits":{"enabled":false},"series":[{"name":"หอย","data":[8,49,64,76,50,41,45,48,39,38,66,69,58,42,32,14,21,11,8,1,0,0]},{"name":"หนองเตียน","data":[8,26,56,53,59,46,46,36,35,53,60,58,58,38,28,24,17,12,8,3,0,0]},{"name":"เนินไฮ","data":[6,29,43,51,49,39,47,25,36,41,51,59,61,25,19,21,11,10,4,2,2,0]},{"name":"ทุ่งแฝก","data":[4,27,28,25,33,18,13,15,23,18,24,29,22,13,10,9,8,5,0,0,1,0]}]});
+});</script>
+<script type="text/javascript">jQuery(window).load(function () {
+
+
+
+    var chartc1 = $('#c1').highcharts();
+
+    function setChartDatac1(v) {
+        timec1 = v;
+
+        $('#clb1c1').removeClass('big');
+        $('#clb2c1').removeClass('big');
+        $('#clb3c1').removeClass('big');
+        $('#clb4c1').removeClass('big');
+
+        switch(v) {
+            case 1:
+                $('#clb1c1').addClass('big');
+                //console.log(v);
+                chartc1.series[0].setData([16,52,66,95,64,42,54,57,46,48,71,84,70,44,39,33,27,21,12,17,11,17],true,2000);chartc1.series[1].setData([24,29,63,70,69,47,51,40,37,64,66,62,70,42,47,33,32,21,27,4,19,2],true,2000);chartc1.series[2].setData([17,40,45,55,56,41,59,35,47,44,58,66,64,39,22,22,21,27,18,13,4,12],true,2000);chartc1.series[3].setData([17,39,35,40,53,24,27,22,24,20,36,43,40,17,19,24,16,7,5,4,19,20],true,2000);
+                break;
+            case 2:
+                $('#clb2c1').addClass('big');
+                chartc1.series[0].setData([19,58,77,92,67,46,56,65,41,50,86,84,75,58,34,19,40,15,9,15,1,15],true,2000);chartc1.series[1].setData([26,35,70,63,66,50,56,40,37,66,75,63,78,48,33,37,34,16,24,23,13,7],true,2000);chartc1.series[2].setData([25,35,44,62,52,58,50,38,54,48,67,60,77,45,28,34,22,29,15,8,15,5],true,2000);chartc1.series[3].setData([23,44,45,34,34,19,16,18,28,34,29,47,26,20,22,12,15,25,7,15,14,14],true,2000);
+                break;
+            case 3:
+                $('#clb3c1').addClass('big');
+                chartc1.series[0].setData([21,54,75,77,70,43,51,57,47,48,81,87,73,58,49,25,36,17,25,8,19,2],true,2000);chartc1.series[1].setData([26,46,60,64,77,58,49,40,49,65,74,60,76,41,37,27,30,14,26,18,4,10],true,2000);chartc1.series[2].setData([10,37,53,57,53,59,50,39,55,48,66,72,62,31,38,33,24,27,18,15,21,1],true,2000);chartc1.series[3].setData([10,31,41,32,42,22,16,35,35,31,35,44,25,23,14,24,15,21,1,10,5,20],true,2000);
+                break;
+            case 4:
+                $('#clb4c1').addClass('big');
+                chartc1.series[0].setData([20,50,68,92,56,45,52,64,49,49,69,78,70,52,48,19,37,25,26,8,12,3],true,2000);chartc1.series[1].setData([23,35,73,73,64,57,47,56,39,71,63,72,70,46,31,34,22,27,10,15,2,1],true,2000);chartc1.series[2].setData([25,34,54,53,57,40,61,45,38,46,62,72,66,31,31,33,23,14,24,16,18,14],true,2000);chartc1.series[3].setData([17,28,32,34,44,25,19,34,35,26,31,42,25,31,26,25,17,19,18,1,3,9],true,2000);
+                break;
+        }
+    }
+
+    $('#cl1c1').click(function () {
+        isPausedc1 = true;
+        setChartDatac1(1);
+    });
+
+    $('#cl2c1').click(function () {
+        isPausedc1 = true;
+        setChartDatac1(2);
+    });
+
+    $('#cl3c1').click(function () {
+        isPausedc1 = true;
+        setChartDatac1(3);
+    });
+
+    $('#cl4c1').click(function () {
+        isPausedc1 = true;
+        setChartDatac1(4);
+    });
+
+
+    var isPausedc1 = true;
+    var timec1 = 4;
+
+    var t = window.setInterval(function() {
+        if(!isPausedc1) {
+            setChartDatac1(timec1);
+            timec1--;
+
+            if (timec1 < 1) {
+                timec1 = 4;
+            }
+            $('#playpause_ic1').removeClass('fa-play').addClass('fa-pause');
+            $('#playpausec1').addClass('btn-danger');
+
+        } else {
+            $('#playpause_ic1').removeClass('fa-pause').addClass('fa-play');
+            $('#playpausec1').removeClass('btn-danger');
+
+        }
+    }, 2000);
+
+
+    $('#playpausec1').on('click', function(e) {
+        e.preventDefault();
+        isPausedc1 = !isPausedc1;
+        if(!isPausedc1) {
+            $('#playpause_ic1').removeClass('fa-play').addClass('fa-pause');
+            $('#playpausec1').addClass('btn-danger');
+        } else {
+            $('#playpause_ic1').removeClass('fa-pause').addClass('fa-play');
+            $('#playpausec1').removeClass('btn-danger');
+        }
+
+    });
+
+
+});</script>
+</body>
+</html>
